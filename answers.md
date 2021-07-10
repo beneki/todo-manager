@@ -70,4 +70,6 @@ in the first place and befire it all we should check if we can sort out the prob
 
 Choose one component from CheapTickets.nl and explain what information do you need in order to be able to implement that component.
 
+Answer:
+
 for instance for implementing AirLine tickets component I need (optional: if there is a figma Ui for it )to know after clicking on find your flight how component should react, after selecting start and end date other elements behaviour , knowing edge cases for date picking or adding people to the tickets knowing edge case for multiple destination ( how many destination can be selected by end user) , validating Inputs (which is kindda trivial but in case company has its own policy) and whcih endpoints should be called, how many times is allowed to be called.
