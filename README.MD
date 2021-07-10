@@ -1,6 +1,6 @@
 <div>
 
-  <h1 align="center">React Hooks, Typescript with Redux Toolkit</h1>
+  <h1 align="center">ToDo Manager - Manage Your Daily Dasks </h1>
   <p>
     This project is implemented with auto cache approach plus using state management with redux toolkit
     Over this project  Im using Jest, RTL , Cypress (unit, integraiton, E2E tests)
