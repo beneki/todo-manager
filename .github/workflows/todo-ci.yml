@@ -27,3 +27,4 @@ jobs:
     - run: yarn ci
     - run: yarn build
     - run: yarn test
+    - run: pm2 restart BackendAPI
