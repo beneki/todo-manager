@@ -81,8 +81,15 @@ export const Item = (props: ItemProps) => {
     ) : (
       <>
         {itm.title}
-        <span>Delete</span>
-        <span onMouseDown={onEdit} role="button" tabIndex={-1}>
+        <span
+          role="button"
+          tabIndex={-1}
+          onMouseDown={() => onInputHit('', true)}
+        >
+          {' '}
+          Delete
+        </span>
+        <span role="button" tabIndex={-1} onMouseDown={onEdit}>
           Edit
         </span>
       </>

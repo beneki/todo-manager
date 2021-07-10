@@ -1,4 +1,4 @@
-import { useState, memo } from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 
 const TodoInput = styled.input`
@@ -23,7 +23,7 @@ interface InputProps {
   defVal?: string
 }
 
-const WrappedInput = (props: InputProps) => {
+export const Input = (props: InputProps) => {
   const [val, setVal] = useState(props.defVal || '')
   const onKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
@@ -42,4 +42,3 @@ const WrappedInput = (props: InputProps) => {
     />
   )
 }
-export const Input = memo(WrappedInput)
