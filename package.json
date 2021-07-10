@@ -6,7 +6,7 @@
     "start": "webpack serve --config webpack/webpack.config.js --env env=dev",
     "start-server": "npx ts-node server/index.ts",
     "build-server": "cd server && tsc index.ts",
-    "pm2": "NODE_ENV=production pm2 start server/index.js --watch -i max",
+    "pm2": "NODE_ENV=production pm2 start --name 'BackendAPI' server/index.js --watch -i max",
     "start-static-storybook": "npx http-server ./storybook-static",
     "build": "webpack --config webpack/webpack.config.js --env env=prod",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
