@@ -1,7 +1,7 @@
 {
-  "name": "react-typescript-webpack-starter",
+  "name": "todo-manager",
   "version": "1.0.0",
-  "description": "A starter template for React with Typescript using Webpack 5",
+  "description": "Manager the daily tasks with react, redux, typescript",
   "scripts": {
     "start": "webpack serve --config webpack/webpack.config.js --env env=dev",
     "start-server": "npx ts-node server/index.ts",
@@ -22,11 +22,7 @@
     "ci": "rm -rf node_modules && yarn install --frozen-lockfile"
   },
   "keywords": [
-    "React",
-    "TypeScript",
-    "Webpack 5",
-    "Starter Template",
-    "Boilerplate"
+    "daily tasks manager"
   ],
   "author": "Mahyar Hossein Eki",
   "license": "MIT",
