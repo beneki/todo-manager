@@ -13,7 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/api/tasks', function (req, res) {
-    return res.status(200).json(tasksContainer);
+  return res.status(200).json(tasksContainer);
 });
 /**
  * Get /api/task/:id
@@ -27,25 +27,25 @@ app.get('/api/tasks', function (req, res) {
  * If id is not valid number return status code 400.
  */
 app.get('/api/task/:id', function (req, res) {
-    var id = parseInt(req.params.id, 10);
-    if (!Number.isNaN(id)) {
-        var task = tasksContainer.find(function (item) { return item.id === id; });
-        if (task !== null) {
-            return res.status(200).json({
-                task: task
-            });
-        }
-        else {
-            return res.status(404).json({
-                message: 'Not found.'
-            });
-        }
+  var id = parseInt(req.params.id, 10);
+  if (!Number.isNaN(id)) {
+    var task = tasksContainer.find(function (item) { return item.id === id; });
+    if (task !== null) {
+      return res.status(200).json({
+        task: task
+      });
     }
     else {
-        return res.status(400).json({
-            message: 'Bad request.'
-        });
+      return res.status(404).json({
+        message: 'Not found.'
+      });
     }
+  }
+  else {
+    return res.status(400).json({
+      message: 'Bad request.'
+    });
+  }
 });
 /**
  * PUT /api/task/update/:id/:title/:description
@@ -60,25 +60,25 @@ app.get('/api/task/:id', function (req, res) {
  * If the provided id is not a valid number return a status code 400.
  */
 app.put('/api/task/update/:id/:title/:description', function (req, res) {
-    var id = parseInt(req.params.id, 10);
-    if (!Number.isNaN(id)) {
-        var task = tasksContainer.tasks.find(function (item) { return item.id === id; });
-        if (task !== null) {
-            task.title = req.params.title;
-            task.description = req.params.description;
-            return res.status(204);
-        }
-        else {
-            return res.status(404).json({
-                message: 'Not found'
-            });
-        }
+  var id = parseInt(req.params.id, 10);
+  if (!Number.isNaN(id)) {
+    var task = tasksContainer.tasks.find(function (item) { return item.id === id; });
+    if (task !== null) {
+      task.title = req.params.title;
+      task.description = req.params.description;
+      return res.status(204);
     }
     else {
-        return res.status(400).json({
-            message: 'Bad request'
-        });
+      return res.status(404).json({
+        message: 'Not found'
+      });
     }
+  }
+  else {
+    return res.status(400).json({
+      message: 'Bad request'
+    });
+  }
 });
 /**
  * POST /api/task/create/:title/:description
@@ -90,18 +90,18 @@ app.put('/api/task/update/:id/:title/:description', function (req, res) {
  * Return status code 201.
  */
 // app.post('/api/task/create/:title/:description', (req: any, res: any) => {
-app.post('/tasks/sync', function (req, res) {
-    var tasks = req.body.tasks;
-    tasksContainer.tasks = tasks;
-    var jsonStr = JSON.stringify(tasksContainer);
-    fs.writeFile('./server/tasks.json', jsonStr, 'utf8', function (error) {
-        if (error) {
-            console.log('error happend during writing json');
-        }
-    });
-    return res.status(201).json({
-        message: 'Resource created'
-    });
+app.post('/api/tasks/sync', function (req, res) {
+  var tasks = req.body.tasks;
+  tasksContainer.tasks = tasks;
+  var jsonStr = JSON.stringify(tasksContainer);
+  fs.writeFile('./server/tasks.json', jsonStr, 'utf8', function (error) {
+    if (error) {
+      console.log('error happend during writing json');
+    }
+  });
+  return res.status(201).json({
+    message: 'Resource created'
+  });
 });
 /**
  * DELETE /api/task/delete/:id
@@ -114,28 +114,28 @@ app.post('/tasks/sync', function (req, res) {
  * If the provided id is not a valid number return a status code 400.
  */
 app["delete"]('/api/task/delete/:id', function (req, res) {
-    var id = parseInt(req.params.id, 10);
-    if (!Number.isNaN(id)) {
-        var task = tasksContainer.tasks.find(function (item) { return item.id === id; });
-        if (task !== null) {
-            var taskIndex = tasksContainer.tasks;
-            tasksContainer.tasks.splice(taskIndex, 1);
-            return res.status(200).json({
-                message: 'Updated successfully'
-            });
-        }
-        else {
-            return res.status(404).json({
-                message: 'Not found'
-            });
-        }
+  var id = parseInt(req.params.id, 10);
+  if (!Number.isNaN(id)) {
+    var task = tasksContainer.tasks.find(function (item) { return item.id === id; });
+    if (task !== null) {
+      var taskIndex = tasksContainer.tasks;
+      tasksContainer.tasks.splice(taskIndex, 1);
+      return res.status(200).json({
+        message: 'Updated successfully'
+      });
     }
     else {
-        return res.status(400).json({
-            message: 'Bad request'
-        });
+      return res.status(404).json({
+        message: 'Not found'
+      });
     }
+  }
+  else {
+    return res.status(400).json({
+      message: 'Bad request'
+    });
+  }
 });
 app.listen(9001, function () {
-    process.stdout.write('The server is available on http://localhost:9001/\n');
+  process.stdout.write('The server is available on http://localhost:9001/\n');
 });

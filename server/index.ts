@@ -94,7 +94,7 @@ app.put('/api/task/update/:id/:title/:description', (req: any, res: any) => {
  * Return status code 201.
  */
 // app.post('/api/task/create/:title/:description', (req: any, res: any) => {
-app.post('/tasks/sync', (req: any, res: any) => {
+app.post('/api/tasks/sync', (req: any, res: any) => {
   const tasks = req.body.tasks
 
   tasksContainer.tasks = tasks
