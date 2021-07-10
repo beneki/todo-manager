@@ -26,8 +26,11 @@ Prettier
 Husky (to ommit conflicts and mistakes before commit)
 Module Bundler (can be as fast as Cutting Edge like Snowpack which just supports modern browsers or Webpack which is stable bundler, parcell, ...)
 Optimizer plugins (Gzip compression or uglifying js which webpack do these stuffs under the hood for you, ...)
+React-Dev-Tool
+Redux-Dev-Tool
+Lighthouse (plugin with cypress)
 
-What are the different ways of rendering pages and what are the use-case/pros and cons for each one?
+3. What are the different ways of rendering pages and what are the use-case/pros and cons for each one?
 
 Answer:
 
@@ -52,7 +55,7 @@ createHistory from "history/createBrowserHistory" : if want to redirect from red
 
 and with the dynamic approach of react-router : in static routing all the routes will be defined in single location but whith newly came dynamic routing we can load pages in nested children with routing approach this is good when we have different page loading strategy in different parts of application
 
-How can we ensure that FE is working well in production?
+4. How can we ensure that FE is working well in production?
 
 Answer:
 
@@ -62,13 +65,13 @@ doing other performance tests like profiling using react devtool (ind dev) or us
 if you are using llight house there are some factor that can boost performance like (first contentfull paint, speed index , time to interactive) these factors let you to evaluate user's experience and also there are lots of other tools like https://www.webpagetest.org/ which gives your better features than Lighthouse that you can and etc.
 other tools like webpack can boost our performance with using optimizatins like bundlings and uglifying and other plugins.
 
-What are the parameters to take into account before adding a new library to the project?
+5. What are the parameters to take into account before adding a new library to the project?
 
 Answer:
 
 in the first place and befire it all we should check if we can sort out the problem with not adding that library if yes how much (time or money-wise) does it cost ? then if we decided to use that library we go first with reputation check (like git stars or ...),checking bundle size, then bug reports and active support, well documented guides, then we check it move on to security check phase with tools like npm audit or snyk to check libarry vulnerabalities and then we can add it to the project.
 
-Choose one component from CheapTickets.nl and explain what information do you need in order to be able to implement that component.
+6. Choose one component from CheapTickets.nl and explain what information do you need in order to be able to implement that component.
 
 Answer:
 
