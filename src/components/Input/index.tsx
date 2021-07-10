@@ -35,6 +35,7 @@ export const Input = (props: InputProps) => {
     <TodoInput
       type="text"
       name={props.name}
+      data-testid="mainTodoInput"
       placeholder="Write down your task and hit enter"
       onChange={(e) => setVal(e.target.value)}
       onKeyPress={onKeyPress}

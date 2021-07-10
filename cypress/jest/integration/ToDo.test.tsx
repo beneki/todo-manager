@@ -38,9 +38,7 @@ describe('ToDo functionality', () => {
       </Provider>
     )
 
-    const mainInput = screen.getByPlaceholderText(
-      'Write down your task right here'
-    )
+    const mainInput = screen.getByTestId('mainTodoInput')
     fireEvent.change(mainInput, {
       // type some text(task tex) into main Input
       target: { value: 'buy a house a book with $5453.0' },
