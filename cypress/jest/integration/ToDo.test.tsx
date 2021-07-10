@@ -13,11 +13,11 @@ import {
   cleanup,
   waitFor,
 } from '@testing-library/react'
-import ToDo from '../../containers/ToDo'
+import ToDo from '../../../src/containers/ToDo'
 import '@testing-library/jest-dom'
 import { Provider } from 'react-redux'
-import testReduxStore from '../../app/choppedReduxStore'
-import { ITask } from '../../interfaces'
+import testReduxStore from '../../../src/app/choppedReduxStore'
+import { ITask } from '../../../src/interfaces'
 
 afterEach(cleanup)
 

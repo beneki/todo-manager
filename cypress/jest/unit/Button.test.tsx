@@ -8,12 +8,12 @@
 
 import { fireEvent, render, screen, cleanup } from '@testing-library/react'
 import ReactDOM from 'react-dom'
-import { ButtonProps } from '../../components/Button'
+import { ButtonProps } from '../../../src/components/Button'
 import {
   Primary,
   Default,
   Disabled,
-} from '../../components/Button/Button.stories'
+} from '../../../src/components/Button/Button.stories'
 import '@testing-library/jest-dom'
 
 afterEach(cleanup)
