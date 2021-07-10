@@ -33,7 +33,7 @@ const TodoItem = styled.div`
     margin-top: 7px;
     &:hover {
       cursor: pointer;
-      background: blue;
+      background: #9189ff;
     }
     &:first-child {
       border-color: #fbaaaa;
