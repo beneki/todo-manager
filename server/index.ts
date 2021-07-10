@@ -13,12 +13,12 @@ const tasksContainer = require('./tasks.json')
 app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-app.get('/tasks', (req: any, res: any) => {
+app.get('/api/tasks', (req: any, res: any) => {
   return res.status(200).json(tasksContainer)
 })
 
 /**
- * Get /task/:id
+ * Get /api/task/:id
  *
  * id: Number
  *
@@ -28,7 +28,7 @@ app.get('/tasks', (req: any, res: any) => {
  * If not found return status code 404.
  * If id is not valid number return status code 400.
  */
-app.get('/task/:id', (req: any, res: any) => {
+app.get('/api/task/:id', (req: any, res: any) => {
   const id = parseInt(req.params.id, 10)
 
   if (!Number.isNaN(id)) {
@@ -51,7 +51,7 @@ app.get('/task/:id', (req: any, res: any) => {
 })
 
 /**
- * PUT /task/update/:id/:title/:description
+ * PUT /api/task/update/:id/:title/:description
  *
  * id: Number
  * title: string
@@ -62,7 +62,7 @@ app.get('/task/:id', (req: any, res: any) => {
  * If the task is not found, return a status code 404.
  * If the provided id is not a valid number return a status code 400.
  */
-app.put('/task/update/:id/:title/:description', (req: any, res: any) => {
+app.put('/api/task/update/:id/:title/:description', (req: any, res: any) => {
   const id = parseInt(req.params.id, 10)
 
   if (!Number.isNaN(id)) {
@@ -85,7 +85,7 @@ app.put('/task/update/:id/:title/:description', (req: any, res: any) => {
 })
 
 /**
- * POST /task/create/:title/:description
+ * POST /api/task/create/:title/:description
  *
  * title: string
  * description: string
@@ -93,7 +93,7 @@ app.put('/task/update/:id/:title/:description', (req: any, res: any) => {
  * Add a new task to the array tasksContainer.tasks with the given title and description.
  * Return status code 201.
  */
-// app.post('/task/create/:title/:description', (req: any, res: any) => {
+// app.post('/api/task/create/:title/:description', (req: any, res: any) => {
 app.post('/tasks/sync', (req: any, res: any) => {
   const tasks = req.body.tasks
 
@@ -111,7 +111,7 @@ app.post('/tasks/sync', (req: any, res: any) => {
 })
 
 /**
- * DELETE /task/delete/:id
+ * DELETE /api/task/delete/:id
  *
  * id: Number
  *
@@ -120,7 +120,7 @@ app.post('/tasks/sync', (req: any, res: any) => {
  * If the task is not found, return a status code 404.
  * If the provided id is not a valid number return a status code 400.
  */
-app.delete('/task/delete/:id', (req: any, res: any) => {
+app.delete('/api/task/delete/:id', (req: any, res: any) => {
   const id = parseInt(req.params.id, 10)
 
   if (!Number.isNaN(id)) {
