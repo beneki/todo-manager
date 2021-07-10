@@ -2,7 +2,7 @@
 
 Answer:
 
-there are two ways to evaluating FE performance one is Synthetic (lab-style) environment and the other is In the Wild
+There are two ways to evaluating FE performance one is Synthetic (lab-style) environment and the other is In the Wild
 Synthetic lab-style environment where we have defined test setup in known conditions and In the Wild is putting ourselves as end user and test it with real browsers and different devices.
 (I explained more in detial regarding tools that can leverage for performance evaluating)
 but the most key in performance test is E2E becuase but if we wanna take action towards have a good performance is using test like lots of unit test average numbr of integration test and few good e2e test.
@@ -34,31 +34,20 @@ Lighthouse (plugin with cypress)
 
 Answer:
 
-we can render pages using conditional rendering, render props, react router (static routing and dynamic routing),
-if we just wanna address render in just one page conditional rendering is a good way of handling it but it causes to cohesive code when routes grow more and it causes props drliing when we have child pages
+Server side rendering , client side rendering
+in server side rendering we will have more secure web app which end uesr will see just simple HTML
+but in client based application(client side rendering) we are more exposed to security attacks but at the other hand we will have more faster and mroe interactive app.
+other downside for client side rendering is initial load time and bootstraping the Front end framework (like react, angular or vue), SEO, Browser support, client side performance
+but at other hand with client side rendering you will have pros like fast data exchange with backend (just raw data), less requests to backend (bring down cost of waiting time per each interaction with the app), totally is pretty fast
 
-also with react ReactDom.render we can load our page on brwoser which is good just for staring point of the application.
-
-component's own render or return function defining other pages inside this section and handling it with conditions will lead to load a new pages.
-
-one of the advantages of render props is that we can render out page depending on or not some conditions in child page
-
-react router is most standard way of rendering pages when our pages grow bigger and we want do string check on address may or may not with regex, react router comes with other tools like Link and also
-
-Redirect in react-router-dom: This is the recommended way to navigate other than the <Link> method. The downside of this method is that in cases like when we want to redirect directly from a redux action, we cannot do so.
-
-react-router ships with new hook which called useHistory we can leverage it to access the state of the router and after this we can use push method to load other pages
-
-History prop: every component which is immediate child of <Route> component can access history (and those childs which are not immedite child we can wrap them with withRouter to use this property) and with push function of this property we can load pages
-
-createHistory from "history/createBrowserHistory" : if want to redirect from redux action we have to pass history to that action which increases number of arguments with this method you'll shorter a neater code
-
-and with the dynamic approach of react-router : in static routing all the routes will be defined in single location but whith newly came dynamic routing we can load pages in nested children with routing approach this is good when we have different page loading strategy in different parts of application
+at the other hand we also have appraoches like SSR (like Gatsby) and mix of all of it like Next.js.
 
 4. How can we ensure that FE is working well in production?
 
 Answer:
 
+First of all we should being sure of test that all are passed, E2E tests are passing properly.
+Using react dev tool to check memory leaks or rendering problems or do profiling if any component gets sluggish.
 apart from In the Wild approach (test with different browsers and devices with different type of networks speed) we can exploit test tools like google lighthouse (chrome devtool have light house built in to it) when you start using Lighthouse, it will start to examin the performance, accessibility and SEO of the page, you can also choose to have a test page in a mobile scenario where it uses an emulated mobile devices(which has slowed down cpu, slower network and etc)
 another way to bring google lighthouse into your development process is to exploit your exisitng automation test for instance in Cyprss you can use Cypruss-audit plugin to allows you to use light house in your automation test and also can use lots of other feature of cypress like full network stubbing (should take automated e2e into account).
 doing other performance tests like profiling using react devtool (ind dev) or using browser's own profiling panel.
@@ -75,4 +64,4 @@ in the first place and befire it all we should check if we can sort out the prob
 
 Answer:
 
-for instance for implementing AirLine tickets component I need (optional: if there is a figma Ui for it )to know after clicking on find your flight how component should react, after selecting start and end date other elements behaviour , knowing edge cases for date picking or adding people to the tickets knowing edge case for multiple destination ( how many destination can be selected by end user) , validating Inputs (which is kindda trivial but in case company has its own policy) and whcih endpoints should be called, how many times is allowed to be called.
+For instance for implementing AirLine tickets component I need (optional: if there is a figma Ui for it )to know after clicking on find your flight how component should react, after selecting start and end date other elements behaviour , knowing edge cases for date picking or adding people to the tickets knowing edge case for multiple destination ( how many destination can be selected by end user) , validating Inputs (which is kindda trivial but in case company has its own policy) and whcih endpoints should be called, how many times is allowed to be called.
