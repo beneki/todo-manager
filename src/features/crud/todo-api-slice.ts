@@ -8,7 +8,10 @@ interface XHRResponse {
 export const apiSlice = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:9001/',
+    baseUrl:
+      process.env.NODE_ENV === 'development'
+        ? 'http://localhost:9001/v1'
+        : '/api',
     // prepareHeaders(headers) {
     //   headers.set('x-api-key', DOGS_API_KEY)
     //   return headers
