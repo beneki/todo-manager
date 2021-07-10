@@ -10,8 +10,11 @@ const TodoItem = styled.div`
   border: 0 none;
   height: 2.4rem;
   line-height: 2.4;
-  border-bottom: 1px solid #e0e0e0;
-  text-decoration: ${(props: { txtDeco: boolean }) =>
+
+  border-bottom: ${(props: { txtDeco: boolean; isEdit: boolean }) =>
+    props.isEdit ? 'none' : '1px solid #e0e0e0'};
+  box-sizing: border-box;
+  text-decoration: ${(props: { txtDeco: boolean; isEdit: boolean }) =>
     props.txtDeco ? 'line-through' : 'none'};
   &:hover {
     cursor: pointer;
@@ -23,21 +26,25 @@ const TodoItem = styled.div`
     text-align: center;
     height: 18px;
     line-height: 16px;
-    border: 1px solid gray;
+    border: 1px solid #cacaca;
+
+    border-radius: 1rem;
     float: right;
+    margin-top: 7px;
     &:hover {
       cursor: pointer;
       background: blue;
     }
     &:first-child {
+      border-color: #fbaaaa;
       margin-left: 0.3rem;
       &:hover {
-        background: red;
+        background: #fbaaaa;
       }
     }
   }
   &:focus {
-    background-color: #f9f9f9;
+    background-color: #8a8aff;
     border: 0 none;
   }
 `
@@ -74,7 +81,7 @@ export const Item = (props: ItemProps) => {
     ) : (
       <>
         {itm.title}
-        <span>x</span>
+        <span>Delete</span>
         <span onMouseDown={onEdit} role="button" tabIndex={-1}>
           Edit
         </span>
@@ -83,7 +90,11 @@ export const Item = (props: ItemProps) => {
 
   return (
     <>
-      <TodoItem txtDeco={isTxtThru} onClick={() => onInputHit('', true)}>
+      <TodoItem
+        txtDeco={isTxtThru}
+        isEdit={isEdit}
+        onClick={() => onInputHit('', true)}
+      >
         {renderContent()}
       </TodoItem>
     </>

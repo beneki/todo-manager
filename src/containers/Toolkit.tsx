@@ -5,7 +5,9 @@ import { Button, BTN_VARIANT, ALIGN } from '../components'
 import { useSyncToDoListMutation } from '../features/crud/todo-api-slice'
 import { ITask } from '../interfaces'
 
-const Container = styled.div``
+const Container = styled.div`
+  margin-top: 2rem;
+`
 
 function Toolkit() {
   const [syncToDoList, { isLoading }] = useSyncToDoListMutation()
@@ -26,7 +28,7 @@ function Toolkit() {
         variant={BTN_VARIANT.PRIMARY}
         align={ALIGN.RIGHT}
         callBack={onConfirm}
-        label="Persist it to Data Base"
+        label="Sync Data Base with tasks"
         disabled={isLoading ? true : false}
       />
     </Container>

@@ -9,6 +9,11 @@
         Using React Hooks, Typescript, Redux Toolkit (RTK), Styled Components, Storybook, Jest, RTL, Cypres
         Webpack, ESLint, Husky, Prettier
   </p>
+  <p>
+    At first load, data will be fetched form backend through RTK Query feature of Redux-Toolkit.
+    When you write down your task and hit enter redux state will be updated and all of the communicaiton are handled with redux state management and just when you hit on 'Sync with Data Base' Button app will leverages RTK Query (redux toolkit query) to send request to backend
+    Note: Just for the sake of this assignment, I'm using both automatic caching approach (with RTK Query) and state management approach
+  </P>
   <a href="https://mahyarek.site">Demo</a>
 </div>
 

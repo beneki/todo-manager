@@ -11,6 +11,7 @@ const TodoInput = styled.input`
   -webkit-box-shadow: -2px 2px 3px 0px rgb(204 204 204 / 75%);
   -moz-box-shadow: -2px 2px 3px 0px rgb(204 204 204 / 75%);
   box-shadow: -2px 2px 3px 0px rgb(204 204 204 / 75%);
+  box-sizing: border-box;
   &:focus {
     background-color: #f9f9f9;
     border: 0 none;
@@ -34,7 +35,7 @@ const WrappedInput = (props: InputProps) => {
     <TodoInput
       type="text"
       name={props.name}
-      placeholder="Write down your task right here"
+      placeholder="Write down your task and hit enter"
       onChange={(e) => setVal(e.target.value)}
       onKeyPress={onKeyPress}
       value={val}

@@ -44,6 +44,9 @@ const StButton = styled.button`
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
+  @media only screen and (max-width: 768px) {
+    margin: 0 auto;
+  }
 `
 
 export const Button = ({
