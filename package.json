@@ -16,7 +16,8 @@
     "test:e2e": "cypress open",
     "test:coverage": "jest --watchAll=false --testPathPattern=cypress/ --coverage",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "ci": "rm -rf node_modules && yarn install --frozen-lockfile"
   },
   "keywords": [
     "React",
