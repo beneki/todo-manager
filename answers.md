@@ -6,6 +6,7 @@ There are two ways to evaluating FE performance one is Synthetic (lab-style) env
 Synthetic lab-style environment where we have defined test setup in known conditions and In the Wild is putting ourselves as end user and test it with real browsers and different devices.
 (I explained more in detial regarding tools that can leverage for performance evaluating)
 but the most key in performance test is E2E becuase but if we wanna take action towards have a good performance is using test like lots of unit test average numbr of integration test and few good e2e test.
+And beside these we also should do test coverage to be aware of not covered whereabouts in our tests and sort them out.
 
 2. What are the tools that are essential in developing FE applications with high quality?
 

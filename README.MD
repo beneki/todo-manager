@@ -18,6 +18,13 @@
   <a href="https://mahyarek.site">Demo</a>
 </div>
 
+<p>
+  Note: tests are located inside cypress folder :
+  cypress/e2e : for End to End tests
+  cypress/jest/unit : for Unit tests
+  cypress/jest/integration : for Integration tests
+</p>
+
 <h2 align="center">Install</h2>
 
 Install with yarn:
