@@ -17,23 +17,21 @@
   </P>
   <a href="https://mahyarek.site">Demo</a>
 
-  <p>
-    <strong>Requirements:</strong>
-      :heavy_check_mark: React 17+ (React @17.0.2)
-      :heavy_check_mark: Redux (latest version of Redux)
-      :heavy_check_mark: Good state management (Redux toolkit)
-      :heavy_check_mark: Modular CSS :heavy_check_mark:
-      :heavy_check_mark: Responsive design
-      :heavy_check_mark: Linting (ES Lint)
-      :heavy_check_mark: Unit tests (Jest)
-      
-      :heavy_check_mark: Typescript
-      :heavy_check_mark: CSS-in-JS(Styled Components)
-      :heavy_check_mark: Integration/E2E tests (Cypress.io)
-      :heavy_check_mark: Automated deployment (Github Actions with node.js CI)
-      :heavy_check_mark: Storybook
+  <div>
+    <strong>Using of:</strong>
+    <p> :heavy_check_mark: React 17+ (React @17.0.2) </p>
+    <p> :heavy_check_mark: Redux (latest version of Redux) </p>
+    <p> :heavy_check_mark: Good state management (Redux toolkit) </p>
+    <p> :heavy_check_mark: Responsive design </p>
+    <p> :heavy_check_mark: Linting (ES Lint) </p>
+    <p> :heavy_check_mark: Unit tests (Jest) </p>
+    <p> :heavy_check_mark: Typescript </p>
+    <p> :heavy_check_mark: CSS-in-JS(Styled Components) </p>
+    <p> :heavy_check_mark: Integration/E2E tests (Cypress.io) </p>
+    <p> :heavy_check_mark: Automated deployment (Github Actions with node.js CI) </p>
+    <p> :heavy_check_mark: Storybook </p>
 
-  </p>
+  </div>
 </div>
 
 <p>
