@@ -17,8 +17,8 @@
   </P>
   <a href="https://mahyarek.site">Demo</a>
 
-  <div>
-    <strong>Using of:</strong>
+  <div style="margin-top:3.5rem;">
+    <strong style="display:inline-block;margin-bottom: 1.5rem;">Using of:</strong>
     <p> :heavy_check_mark: React 17+ (React @17.0.2) </p>
     <p> :heavy_check_mark: Redux (latest version of Redux) </p>
     <p> :heavy_check_mark: Good state management (Redux toolkit) </p>
