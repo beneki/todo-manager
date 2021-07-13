@@ -15,7 +15,7 @@
     When you write down your task and hit enter redux state will be updated and all of the interactions with app are handled with redux state management and just when you tap on 'Sync Data Base with tasks' Button app will use RTK Query (redux toolkit query) to send data to the backend side which will be persisted to json file inside server folder.
     Note: Just for the sake of this assignment, I'm using both automatic caching approach (with RTK Query) and state management approach.
   </P>
-  <h3><a href="https://mahyarek.site">Demo</a></h3>
+  <h3><a href="https://mahyarek.site/todo">Demo</a></h3>
 
   <div>
     <h3>Using of:</h3>
