@@ -27,7 +27,7 @@
   "author": "Mahyar Hossein Eki",
   "license": "MIT",
   "dependencies": {
-    "@reduxjs/toolkit": "^1.6.0",
+    "@reduxjs/toolkit": "^1.9.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "react": "^17.0.2",
